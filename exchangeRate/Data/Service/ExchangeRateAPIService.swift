@@ -10,8 +10,9 @@ import Foundation
 import RxSwift
 
 final class ExchangeRateAPIService {
-    private let urlString = "https://open.er-api.com/v6/latest/USD"
+    private let urlString = "https://open.er-api.com/v6/latest/\(CurrencyName.current)"
     
+
     func fetchExchageRates() async throws -> ExchageRateResponseDTO {
         guard let url = URL(string: urlString) else {
             throw URLError(.badURL)
