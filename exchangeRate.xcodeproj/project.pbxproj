@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 76;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,9 +19,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5E13CC432E1D1E7F00D0400F /* Exceptions for "exchangeRate" folder in "exchangeRate" target */ = {
+		5E13CC432E1D1E7F00D0400F /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				/Localized/Resources/LaunchScreen.storyboard,
+				Resources/Assets.xcassets,
 				Resources/Info.plist,
 			);
 			target = 5E13CC2D2E1D1E7C00D0400F /* exchangeRate */;
@@ -29,14 +31,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5E13CC302E1D1E7C00D0400F /* exchangeRate */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5E13CC432E1D1E7F00D0400F /* Exceptions for "exchangeRate" folder in "exchangeRate" target */,
-			);
-			path = exchangeRate;
-			sourceTree = "<group>";
-		};
+		5E13CC302E1D1E7C00D0400F /* exchangeRate */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5E13CC432E1D1E7F00D0400F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = exchangeRate; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +125,7 @@
 				5E13CC822E1D2BCF00D0400F /* XCRemoteSwiftPackageReference "Then" */,
 				5E13CC852E1D2C8700D0400F /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 60;
 			productRefGroup = 5E13CC2F2E1D1E7C00D0400F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
