@@ -9,11 +9,8 @@ import Foundation
 
 import RxSwift
 
+
 final class ExchangeRateUseCaseImpl: ExchangeRateUseCase {
-    func rxFetchExchangeRateData() -> RxSwift.Observable<ExchageRateResponseDTO> {
-        <#code#>
-    }
-    
     
     private let repository: ExchangeRateRepository
     
@@ -25,7 +22,18 @@ final class ExchangeRateUseCaseImpl: ExchangeRateUseCase {
         return try await repository.fetchExchageRateData()
     }
     
-    func rxFetchExchangeRateData() -> Single<ExchangeRateResult> {
-        return repository.rxFetchExchageRateData()
+    func rxFetchExchangeRateData() -> Observable<ExchageRateResponseDTO> {
+        return repository.rxFetchExchangeRateData()
+            .asObservable()
+            .flatMap { result -> Observable<ExchageRateResponseDTO> in
+                switch result {
+                case .success(let dto):
+                    return Observable.just(dto)
+                case .failure(let error):
+                    return Observable.error(error)
+                }
+            }
     }
 }
+
+

@@ -33,7 +33,7 @@ final class CoreDataService {
     
     func saveCurrentView(view: String, code: String?) {
         do {
-            let current = try fetchData(SaveViews.fetchRequest())
+            let current = try fetchData(SaveView.fetchRequest())
             
             if let currentValue = current.first {
                 currentValue.setValue(view, forKey: SaveView.Key.isLastView)

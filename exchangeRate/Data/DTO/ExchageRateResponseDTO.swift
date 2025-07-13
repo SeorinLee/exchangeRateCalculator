@@ -21,4 +21,5 @@ struct ExchageRateResponseDTO: Codable {
         case rates
         case baseCode = "base_code"
     }
+    
 }

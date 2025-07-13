@@ -12,5 +12,5 @@ import RxSwift
 
 protocol ExchangeRateRepository {
     func fetchExchageRateData() async throws -> ExchangeRate
-    func rxFetchExchageRateData() -> Single<ExchangeRateResult>
+    func rxFetchExchangeRateData() -> Single<ExchangeRateResult>
 }

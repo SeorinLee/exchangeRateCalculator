@@ -1,5 +1,5 @@
 //
-//   ExchangeRateUseCaseInterface.swift
+//   ExchangeRateUseCase.swift
 //  exchangeRate
 //
 //  Created by 이서린 on 7/9/25.
