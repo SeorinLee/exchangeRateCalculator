@@ -2,7 +2,7 @@
 //  ReusableProtocol.swift
 //  exchangeRate
 //
-//  Created by 이서린 on 7/8/25.
+//  Created by 이서린 on 7/14/25.
 //
 
 import Foundation

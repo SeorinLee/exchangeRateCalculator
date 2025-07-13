@@ -9,7 +9,17 @@ import Foundation
 
 import RxSwift
 
-protocol ExchangeRateRepositoryInterface {
-    func fetchExchageRateData() async throws -> ExchangeRate
-    func rxFetchExchageRateData() -> Observable<ExchageRateResponseDTO>
+final class ExchangeRateRepositoryImpl: ExchangeRateRepository {
+    
+    private let service = ExchangeRateAPIService()
+    
+    func fetchExchageRateData() async throws -> ExchangeRate {
+        let dto = try await service.fetchExchageRates()
+        
+        return dto.toDomain()
+    }
+    
+    func rxFetchExchageRateData() -> Single<ExchangeRateResult> {
+        return service.rxFetchExchageRates()
+    }
 }

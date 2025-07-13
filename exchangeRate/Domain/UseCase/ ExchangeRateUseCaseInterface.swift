@@ -9,7 +9,7 @@ import Foundation
 
 import RxSwift
 
-protocol ExchangeRateUseCaseInterface {
+protocol ExchangeRateUseCase {
     func fetchExchangeRateData() async throws -> ExchangeRate
     func rxFetchExchangeRateData() -> Observable<ExchageRateResponseDTO>
 }

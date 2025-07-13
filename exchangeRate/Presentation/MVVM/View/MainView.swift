@@ -33,9 +33,6 @@ final class MainView: BaseView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        configureView()
-        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -71,3 +68,4 @@ final class MainView: BaseView {
         }
     }
 }
+

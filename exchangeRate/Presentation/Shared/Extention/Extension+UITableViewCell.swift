@@ -1,8 +1,8 @@
 //
 //  Extension+UITableViewCell.swift
-//  exchangeRate
+//  ExchangeRateCalculator
 //
-//  Created by 이서린 on 7/8/25.
+//  Created by 이서린 on 4/15/25.
 //
 
 import UIKit

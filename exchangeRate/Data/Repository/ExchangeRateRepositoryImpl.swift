@@ -7,18 +7,22 @@
 
 import Foundation
 
-import RxSwift
-
-final class ExchangeRateRepository: ExchangeRateRepositoryInterface {
-    private let service = ExchangeRateAPIService()
+final class CurrencyRepositoryImpl: CoreDataRepository {
+    private let coreDataService = CoreDataService.shared
     
-    func fetchExchageRateData() async throws -> ExchangeRate {
-        let dto = try await service.fetchExchageRates()
-        
-        return dto.toDomain()
+    func updateCurrency(with exchangeRate: ExchangeRate) {
+        coreDataService.updateCurrency(with: exchangeRate)
     }
     
-    func rxFetchExchageRateData() -> Observable<ExchageRateResponseDTO> {
-        return service.rxFetchExchageRates()
+    func loadBookmarkCodes() -> Set<String> {
+        coreDataService.loadBookmarkedCodes()
+    }
+    
+    func toggleBookmark(for code: String) {
+        coreDataService.toggleBookmark(for: code)
+    }
+    
+    func saveCurrentView(view: String, code: String?) {
+        coreDataService.saveCurrentView(view: view, code: code)
     }
 }

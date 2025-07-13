@@ -7,6 +7,8 @@
 
 import Foundation
 
-protocol MainDIContainerInterface {
+protocol DIContainerInterface {
     func makeMainViewModel() -> MainViewModel
+    func makeExchangeRateCalculatorViewModel(currencyModel: CurrencyCellModel) -> ExchangeRateCalculatorViewModel
 }
+

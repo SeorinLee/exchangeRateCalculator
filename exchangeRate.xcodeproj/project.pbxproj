@@ -22,6 +22,7 @@
 		5E13CC432E1D1E7F00D0400F /* Exceptions for "exchangeRate" folder in "exchangeRate" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"Presentation/Shared/Extention/Extension+UITableViewCell.swift",
 				Resources/Info.plist,
 			);
 			target = 5E13CC2D2E1D1E7C00D0400F /* exchangeRate */;
